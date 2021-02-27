@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type UserDetails struct {
+type UserDetails struct { 
 	Login string
 	Password string
 	Success bool
@@ -14,7 +14,7 @@ type UserDetails struct {
 }
 
 var (
-	tmpl = template.Must(template.ParseFiles("forms.html"))
+	tmpl = template.Must(template.ParseFiles("index.html"))
 )
 
 func handler(w http.ResponseWriter, req *http.Request) {
@@ -28,5 +28,5 @@ func handler(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":4000", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
