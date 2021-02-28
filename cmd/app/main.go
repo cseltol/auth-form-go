@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// User data
 type UserDetails struct { 
 	Login string
 	Password string
